@@ -1,0 +1,19 @@
+{
+  "name": "polychess",
+  "version": "1.0.0",
+  "description": "Simple application for playing chess online with real people.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chess",
+    "websockets"
+  ],
+  "author": "Sergei Martianov",
+  "license": "MIT",
+  "dependencies": {
+    "chess.js": "^0.11.0"
+  }
+}
