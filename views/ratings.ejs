@@ -1,0 +1,14 @@
+<%- include('partial/header', { isAuth, title: 'Ratings', page: '/ratings' }) %>
+<table class="table table-dark">
+    <tr>
+        <th>Nickname</th>
+        <th>Rating</th>
+    </tr>
+    <% users.forEach(user => { %>
+    <tr>
+        <td><a href="/user/<%= user.nickname %>"><%= user.nickname %></a></td>
+        <td><%= user.rating %></td>
+    </tr>
+    <% }) %>
+</table>
+<%- include('partial/footer') %> 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= locals.title ? `${locals.title} | ` : '' %>PolyChess</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/cover.css" rel="stylesheet">
+    <link href="/css/signin.css" rel="stylesheet">
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+
+<body class="d-flex h-100 text-center text-white bg-dark">    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+        <div>
+            <h3 class="float-md-start mb-0">PolyChess</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link<%= locals.page === '/' && locals.isOwner !== false ? ' active' : '' %>" href="/">Home</a>
+                <a class="nav-link<%= locals.page === '/ratings' ? ' active' : '' %>" href="/ratings">Ratings</a>    
+                <% if (isAuth) { %>
+                <a class="nav-link<%= locals.page === '/game' ? ' active' : '' %>" href="/game">Random opponent</a>
+                <a class="nav-link<%= locals.page === '/signout' ? ' active' : '' %>" href="/signout">Sign Out</a>
+                <% } %>
+            </nav>
+        </div>
+    </header>

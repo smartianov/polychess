@@ -1,0 +1,55 @@
+<%- include('partial/header', { isAuth, title: user.nickname, page: '/' }) %>
+</script>
+<h1><%= user.nickname %></h1>
+<p>Rating: <%= user.rating %></p>
+<h3>Statistics:</h3>
+<table class="table table-dark">
+    <tr>
+        <th>Color</th>
+        <th>Total games</th>
+        <th>Victories</th>
+        <th>Defeats</th>
+        <th>Draws</th>
+    </tr>
+    <tr>
+        <td>Any</td>
+        <td><%= stats.any.total %></td>
+        <td><%= stats.any.victories %></td>
+        <td><%= stats.any.defeats %></td>
+        <td><%= stats.any.draws %></td>
+    </tr>
+    <tr>
+        <td>White</td>
+        <td><%= stats.white.total %></td>
+        <td><%= stats.white.victories %></td>
+        <td><%= stats.white.defeats %></td>
+        <td><%= stats.white.draws %></td>
+    </tr>
+    <tr>
+        <td>Black</td>
+        <td><%= stats.black.total %></td>
+        <td><%= stats.black.victories %></td>
+        <td><%= stats.black.defeats %></td>
+        <td><%= stats.black.draws %></td>
+    </tr>
+</table>
+<h3>Games:</h3>
+<table>
+    <tr>
+        <th>White</th>
+        <th>Black</th>
+        <th>Played</th>
+        <th>Result</th>
+        <th>PGN</th>
+    </tr>
+    <% games.forEach(game => { %>
+    <tr>
+        <td><%= game.white %></td>
+        <td><%= game.black %></td>
+        <td><%= game.played %></td>
+        <td><%= game.result %></td>
+        <td><a href="<%= game.pgn %>" download="polychess.pgn">Download</a></td>
+    </tr>
+    <% }) %>
+</table>
+<%- include('partial/footer') %> 

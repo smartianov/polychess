@@ -1,0 +1,15 @@
+<%- include('partial/header', { isAuth, page: '/' }) %>
+<main class="form-signin">
+    <form autocomplete="off" method="POST" action="/signin">
+        <h1 class="h3 mb-3 fw-normal">Please authorize</h1>
+        <label for="nickname" class="visually-hidden">Nickname</label>
+        <input type="text" id="nickname" name="nickname" class="form-control" placeholder="Nickname" required autofocus>
+        <label for="password" class="visually-hidden">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+        <button class="w-40 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <button class="w-40 btn btn-lg btn-primary" type="submit">Sign up</button>
+        <!-- <p class="mt-5 mb-3 text-muted">© 2017-2020</p> -->
+        </form>
+</main>
+<script src='/js/index.js'></script>
+<%- include('partial/footer') %>

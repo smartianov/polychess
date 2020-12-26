@@ -1,0 +1,20 @@
+#playing {
+    display: none;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#playing > div {
+    flex-grow: 1;
+}
+
+#pgn {
+    text-align: left;
+    height: 380px;
+    padding: 10px;
+}
+
+#notification {
+    margin-top: 10px;
+    display: none;
+}
